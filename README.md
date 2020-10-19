@@ -1,7 +1,7 @@
 # Cheat-Sheet-for-Data-Science
 Hello Everyone! Here is a Cheat Sheet attached for importing, Exploring, selecting, cleaning,filtering,sorting,grouping,Joining, combining, , writing data with additional Resources to start learning Data Science and Machine learning. Hope this would help
 
-<a href = "https://elitedatascience.com/python-cheat-sheet"><span style ="color:blue";>Click Here for Cheat Sheet on Data Science </span></a>
+<a href = "https://elitedatascience.com/python-cheat-sheet">Click Here for Cheat Sheet on Data Science </a>
 
 
 <b>Importing DataPython</b>
@@ -106,54 +106,72 @@ For a complete list of the Supervised Learning, Unsupervised Learning, and Datas
 
 <u><strong>Code<strong></u>
 
-<b>Import libraries and modules</b>
-import numpy as np
-import pandas as pd
+<strong>Import libraries and modules</strong>
+<br>
+<p>import numpy as np</p>
+<p>import pandas as pd</p>
  
-from sklearn.model_selection import train_test_split
-from sklearn import preprocessing
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.pipeline import make_pipeline
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.externals import joblib 
+<p>from sklearn.model_selection import train_test_split</p>
+<p>from sklearn import preprocessing</p>
+<p>from sklearn.ensemble import RandomForestRegressor</p>
+<p>from sklearn.pipeline import make_pipeline</p>
+<p>from sklearn.model_selection import GridSearchCV</p>
+<p>from sklearn.metrics import mean_squared_error, r2_score</p>
+<p>from sklearn.externals import joblib </p>
+<br>
  
-<b>Load red wine data.</b>
-dataset_url = 'http://mlr.cs.umass.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv'
-data = pd.read_csv(dataset_url, sep=';')
+<strong>Load red wine data.</strong>
+<br>
+<p>dataset_url = 'http://mlr.cs.umass.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv'</p></p>
+<p>data = pd.read_csv(dataset_url, sep=';')</p>
+<br>
  
-<b>Split data into training and test sets</b>
-y = data.quality
-X = data.drop('quality', axis=1)
-X_train, X_test, y_train, y_test = train_test_split(X, y, 
+<strong>Split data into training and test sets</strong>
+<br>
+<p>y = data.quality</p>
+<p>X = data.drop('quality', axis=1)</p>
+<p>X_train, X_test, y_train, y_test = train_test_split(X, y, 
                                                     test_size=0.2, 
                                                     random_state=123, 
-                                                    stratify=y)
+                                                    stratify=y)</p>
+                                                    <br>
  
-<b>Declare data preprocessing steps</b>
-pipeline = make_pipeline(preprocessing.StandardScaler(), 
-                         RandomForestRegressor(n_estimators=100))
+<strong>Declare data preprocessing steps</strong>
+<br>
+<p>pipeline = make_pipeline(preprocessing.StandardScaler(), 
+                         RandomForestRegressor(n_estimators=100))</p>
+                         <br>
  
-<b>Declare hyperparameters to tune</b>
-hyperparameters = { 'randomforestregressor__max_features' : ['auto', 'sqrt', 'log2'],
-                  'randomforestregressor__max_depth': [None, 5, 3, 1]}
+<strong>Declare hyperparameters to tune</strong>
+<br>
+<p>hyperparameters = { 'randomforestregressor__max_features' : ['auto', 'sqrt', 'log2'],
+                  'randomforestregressor__max_depth': [None, 5, 3, 1]}</p>
+                  <br>
  
-<b>Tune model using cross-validation pipeline</b>
-clf = GridSearchCV(pipeline, hyperparameters, cv=10)
+<strong>Tune model using cross-validation pipeline</strong>
+<br>
+<p>clf = GridSearchCV(pipeline, hyperparameters, cv=10)</p>
  
-clf.fit(X_train, y_train)
+<p>clf.fit(X_train, y_train)</p>
+<br>
  
-<b>Refit on the entire training set</b>
-<b> No additional code needed if clf.refit == True (default is True)</b>
+<strong>Refit on the entire training set</strong>
+<br>
+<strong>No additional code needed if clf.refit == True (default is True)</strong>
+<br>
  
-<b>Evaluate model pipeline on test data</b>
-pred = clf.predict(X_test)
-print r2_score(y_test, pred)
-print mean_squared_error(y_test, pred)
+<strong>Evaluate model pipeline on test data</strong>
+<br>
+<p>pred = clf.predict(X_test)</p>
+<p>print r2_score(y_test, pred)</p>
+<p>print mean_squared_error(y_test, pred)</p>
+<br>
  
-<b>Save model for future use</b>
-joblib.dump(clf, 'rf_regressor.pkl')
-<b>To load: clf2 = joblib.load('rf_regressor.pkl')</b>
+<strong>Save model for future use</strong>
+<br>
+<p>joblib.dump(clf, 'rf_regressor.pkl')</p>
+<br>
+    <strong>To load: clf2 = joblib.load('rf_regressor.pkl')</strong>
 
 
 <h4>Conclusion<h4>
