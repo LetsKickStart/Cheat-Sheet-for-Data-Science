@@ -104,7 +104,7 @@ The Scikit-Learn library contains useful methods for training and applying machi
 
 For a complete list of the Supervised Learning, Unsupervised Learning, and Dataset Transformation, and Model Evaluation modules in Scikit-Learn, please refer to its <a href = "https://scikit-learn.org/stable/user_guide.html"><b>user guide</b></a>.
 
-<strong><u>Code</u></strong>
+<h3><u>Code</u></h3>
 
 <strong>Import libraries and modules</strong>
 <br>
@@ -175,7 +175,7 @@ For a complete list of the Supervised Learning, Unsupervised Learning, and Datas
     <strong>To load: clf2 = joblib.load('rf_regressor.pkl')</strong>
 
 
-<h4>Conclusion<h4>
+<h2>Conclusion<h2>
  <br>
 <p>We’ve barely scratching the surface in terms of what you can do with Python and data science, but we hope this cheatsheet has given you a taste of what you can do!</p>
 
