@@ -104,10 +104,11 @@ The Scikit-Learn library contains useful methods for training and applying machi
 
 For a complete list of the Supervised Learning, Unsupervised Learning, and Dataset Transformation, and Model Evaluation modules in Scikit-Learn, please refer to its <a href = "https://scikit-learn.org/stable/user_guide.html"><b>user guide</b></a>.
 
-<u><strong>Code<strong></u>
+<strong style="text-decoration:underline";>Code</strong>
 
 <strong>Import libraries and modules</strong>
 <br>
+
 <p>import numpy as np</p>
 <p>import pandas as pd</p>
  
